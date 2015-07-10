@@ -1,0 +1,261 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+/*My CSS starts here*/
+header{
+	position:fixed;
+	display:block;
+	background-color:#FFF;
+	box-shadow:#777 1px 1px 3px;
+	width:100%;
+	top:0;
+	left:0;
+	overflow:hidden;
+}
+
+p{
+	font-family: 'Josefin Sans', Arial;
+	font-size:1.5625em;
+	line-height:1.5625em;
+}
+
+img{
+	max-width:100%;
+}
+
+footer{
+	display:block;
+	width:100%;
+	padding:10px 0;
+	text-align:center;
+	border-top:solid 10px #a2a2a2;
+	-webkit-border-image:url(../img/edge2.png) 30 5 repeat;
+	overflow:hidden;
+}
+
+.inner{
+	width:55.59%;
+	margin:35px auto;
+}
+
+.banner{
+	height:500px;
+	overflow:hidden;
+}
+
+.logo{
+	color:#777;
+	float:left;
+	margin-left:5px;
+	line-height:30px;
+	text-align:center;
+	font-size:0.9375em;
+	text-decoration:none;
+	font-family: 'Pacifico', cursive;
+	transition: all 0.5s ease-in-out;
+}
+
+.logo:hover{
+	color:#f58715;
+	transition: all 0.5s ease-in-out;
+}
+
+.mainnav{
+	width:36.91%;
+	float:right;
+}
+
+nav ul li{
+	list-style-type:none;
+}
+
+.mainnav-item{
+	display:inline-block;
+	text-decoration:none;
+	text-align:center;
+	font-family:'Josefin Sans', Arial, sans-serif;
+	font-weight:bold;
+	line-height:30px;
+	position:relative;
+	outline:none;
+	color:#777;
+	float:left;
+	width:25%;
+	height:30px;
+}
+
+.mainnav-item:hover, .mainnav-item:focus{
+	color:#f58715;
+	outline:none;
+}
+
+.mainnav-item::before, 
+.mainnav-item::after{
+	display:inline-block;
+	opacity:0;
+	-webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+	transition:transform 0.3s, opacity 0.2s;
+}
+
+.mainnav-item::before{
+	margin-right:10px;
+	content:'[';
+	-webkit-transform: translateX(30px);
+	transform:translateX(30px);
+	
+}
+
+.mainnav-item::after{
+	margin-left:10px;
+	content:']';
+	-webkit-transform: translateX(-30px);
+	transform:translateX(-30px);
+}
+
+.mainnav-item:hover::before,
+.mainnav-item:hover::after,
+.mainnav-item:focus::before,
+.mainnav-item:focus::after{
+	opacity:1;
+	-webkit-transform: translateX(0px);
+	transform:translateX(0px);
+}
+
+.main-titles{
+	font-size:2.5em;
+	font-family: 'Courgette', cursive;
+	color:#354355;
+	margin:50px 0 10px 0;
+}
+
+.main-titles.single{
+	text-align:center;
+}
+
+#nav-trigger{
+	display:none;
+}
+
+.author{
+	font-family:'Josefin Sans', Arial, sans-serif;
+	color:#555;
+	margin-bottom: 30px;
+}
+
+.photo-grid{
+	column-count:3;
+	-webkit-column-count:3;
+	-webkit-column-gap:0;
+	-moz-column-count:3;
+	-moz-column-gap:0;
+	line-height:0;
+}
+
+#floatbtn{
+	position:fixed;
+	right:90%;
+	bottom:45px;
+	width:50px;
+	height:50px;
+	background-color:#555;
+	opacity: 0;
+	transition: all 1s ease-in-out;
+	border-radius:30px;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+	color:#FFF;
+	font-family: 'Courgette', cursive;
+
+}
+
+.fltbtn-change{
+	position:fixed;
+	right:90%;
+	bottom:45px;
+	width:50px;
+	height:50px;
+	background-color:#555;
+	transition: all 1s ease-in-out;
+	opacity:0.5;
+	border-radius:30px;
+	text-align:center;
+	line-height:50px;
+	text-decoration:none;
+	color:#FFF;
+	font-family: 'Courgette', cursive;
+}
+
+.ftr-inner{
+	font-family: 'Pacifico', cursive;
+	color:#354355;
+}
+
+.socialmedia{
+	margin: 10px 0 20px 0;
+}
+
+.social{
+	display:inline-block;
+}
+
+.social.icons{
+	height:40px;
+}
